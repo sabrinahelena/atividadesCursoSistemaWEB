@@ -1,3 +1,6 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using ProjetoWEB.Data;
 namespace ProjetoWEB
 {
     public class Program
@@ -5,6 +8,8 @@ namespace ProjetoWEB
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            builder.Services.AddDbContext<ProjetoWEBContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("ProjetoWEBContext") ?? throw new InvalidOperationException("Connection string 'ProjetoWEBContext' not found.")));
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
