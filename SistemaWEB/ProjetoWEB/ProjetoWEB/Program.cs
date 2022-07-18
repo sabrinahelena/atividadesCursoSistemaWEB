@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using ProjetoWEB.Data;
+using ProjetoWEB.Models;
+
 namespace ProjetoWEB
 {
     public class Program
@@ -36,6 +38,17 @@ namespace ProjetoWEB
                 pattern: "{controller=Home}/{action=Index}/{id?}");
 
             app.Run();
+
+            var employees = new Employees
+            {
+                Name = "Bianca",
+                LastName = "Santos",
+                CPF = "98765432888"
+            };
+
+
+
+
         }
     }
 }
