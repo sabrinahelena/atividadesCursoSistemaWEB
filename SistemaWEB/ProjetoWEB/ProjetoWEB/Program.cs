@@ -38,17 +38,6 @@ namespace ProjetoWEB
                 pattern: "{controller=Home}/{action=Index}/{id?}");
 
             app.Run();
-
-            var employees = new Employees
-            {
-                Name = "Bianca",
-                LastName = "Santos",
-                CPF = "98765432888"
-            };
-
-
-
-
         }
     }
 }

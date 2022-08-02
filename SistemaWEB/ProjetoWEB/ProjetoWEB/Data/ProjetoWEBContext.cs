@@ -14,6 +14,10 @@ namespace ProjetoWEB.Data
         {
         }
 
+        public ProjetoWEBContext()
+        {
+        }
+
         public DbSet<ProjetoWEB.Models.Department> Department { get; set; } = default!;
         public DbSet<ProjetoWEB.Models.Employees> Employees { get; set; } = default!;
 
